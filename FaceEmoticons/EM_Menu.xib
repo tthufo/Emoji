@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" tag="11" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tlg-uO-H3Q">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="tlg-uO-H3Q" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="1pu-XI-rA1"/>
+                <constraint firstAttribute="trailing" secondItem="tlg-uO-H3Q" secondAttribute="trailing" id="GJC-46-LmF"/>
+                <constraint firstAttribute="bottom" secondItem="tlg-uO-H3Q" secondAttribute="bottom" id="aPp-j3-Lju"/>
+                <constraint firstItem="tlg-uO-H3Q" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="qMa-VQ-Sp5"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-129" y="369"/>
+        </view>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="menu" id="cMK-mx-0bw">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cMK-mx-0bw" id="X9o-Pn-AWS">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view tag="12" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sDu-rE-Pf0">
+                        <rect key="frame" x="1" y="1" width="318" height="41"/>
+                        <color key="backgroundColor" red="0.86666666670000003" green="0.93725490199999995" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" tag="11" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghz-qS-k7V">
+                        <rect key="frame" x="8" y="11" width="304" height="21"/>
+                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="ghz-qS-k7V" secondAttribute="bottom" constant="11" id="0aP-Je-xwH"/>
+                    <constraint firstAttribute="trailing" secondItem="sDu-rE-Pf0" secondAttribute="trailing" constant="1" id="11Y-r7-r68"/>
+                    <constraint firstItem="ghz-qS-k7V" firstAttribute="leading" secondItem="X9o-Pn-AWS" secondAttribute="leading" constant="8" id="Cfm-DE-s4n"/>
+                    <constraint firstItem="ghz-qS-k7V" firstAttribute="top" secondItem="X9o-Pn-AWS" secondAttribute="top" constant="11" id="IPu-pp-chk"/>
+                    <constraint firstAttribute="bottom" secondItem="sDu-rE-Pf0" secondAttribute="bottom" constant="1" id="Xwg-B9-I7m"/>
+                    <constraint firstItem="sDu-rE-Pf0" firstAttribute="top" secondItem="X9o-Pn-AWS" secondAttribute="top" constant="1" id="a5m-Zo-Zhl"/>
+                    <constraint firstAttribute="trailing" secondItem="ghz-qS-k7V" secondAttribute="trailing" constant="8" id="h4g-Rw-Rc5"/>
+                    <constraint firstItem="sDu-rE-Pf0" firstAttribute="leading" secondItem="X9o-Pn-AWS" secondAttribute="leading" constant="1" id="hwi-U0-4oR"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <point key="canvasLocation" x="-43" y="659"/>
+        </tableViewCell>
+        <view contentMode="scaleToFill" id="4GU-Co-Y45">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="875"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" tag="11" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="single" translatesAutoresizingMaskIntoConstraints="NO" id="Uim-vt-28A">
+                    <rect key="frame" x="69" y="14" width="182" height="182"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="182" id="Ewx-WG-AXN"/>
+                        <constraint firstAttribute="width" constant="182" id="OfR-QJ-61O"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Single selection" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Keg-YD-rEf">
+                    <rect key="frame" x="69" y="220" width="182" height="20"/>
+                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SIK-7y-CeP">
+                    <rect key="frame" x="20" y="248" width="280" height="139"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="139" id="6U0-3A-wTY"/>
+                        <constraint firstAttribute="width" constant="280" id="CXA-xf-bWd"/>
+                    </constraints>
+                    <string key="text">Just press and hold on the emoji of your choice, the menu will pop up with 5 options. The emoji is copied and you can paste it to Facebook, Message, Twitter, iMessage and Safari. Simple and fun!</string>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" tag="11" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="multi" translatesAutoresizingMaskIntoConstraints="NO" id="rL9-Ov-2wN">
+                    <rect key="frame" x="69" y="432" width="182" height="182"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="182" id="XQR-gu-nL8"/>
+                        <constraint firstAttribute="height" constant="182" id="xWw-0x-rSY"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fp2-Xn-Fg7">
+                    <rect key="frame" x="20" y="662" width="280" height="208"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="280" id="BcB-pS-wai"/>
+                        <constraint firstAttribute="height" constant="208" id="XRE-ds-eGN"/>
+                    </constraints>
+                    <string key="text">When Multi selection option is selected, you can select multi emoji, switch between category, preview and edit your emoji as you like. Finally, press and hold Send button will allow you to paste your emoji to Facebook, Message, Twitter, iMessage and Safari. That's it!</string>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Multi selection" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yNQ-Rq-Ydk">
+                    <rect key="frame" x="95" y="634" width="130" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="KfE-JT-ZFy"/>
+                        <constraint firstAttribute="width" constant="130" id="huO-W9-Di1"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="SIK-7y-CeP" firstAttribute="centerX" secondItem="4GU-Co-Y45" secondAttribute="centerX" id="5pr-KG-kUZ"/>
+                <constraint firstItem="yNQ-Rq-Ydk" firstAttribute="centerX" secondItem="4GU-Co-Y45" secondAttribute="centerX" id="6e7-Cq-7oa"/>
+                <constraint firstItem="yNQ-Rq-Ydk" firstAttribute="top" secondItem="rL9-Ov-2wN" secondAttribute="bottom" constant="20" id="9rI-Ty-44r"/>
+                <constraint firstItem="fp2-Xn-Fg7" firstAttribute="top" secondItem="yNQ-Rq-Ydk" secondAttribute="bottom" constant="8" id="UzR-kM-ok0"/>
+                <constraint firstAttribute="trailing" secondItem="Keg-YD-rEf" secondAttribute="trailing" constant="69" id="XHj-07-1BQ"/>
+                <constraint firstItem="SIK-7y-CeP" firstAttribute="top" secondItem="Keg-YD-rEf" secondAttribute="bottom" constant="8" id="XQZ-9z-9CX"/>
+                <constraint firstItem="rL9-Ov-2wN" firstAttribute="top" secondItem="SIK-7y-CeP" secondAttribute="bottom" constant="45" id="YUi-aH-PlZ"/>
+                <constraint firstItem="fp2-Xn-Fg7" firstAttribute="centerX" secondItem="4GU-Co-Y45" secondAttribute="centerX" id="dZm-fE-pQg"/>
+                <constraint firstItem="Uim-vt-28A" firstAttribute="top" secondItem="4GU-Co-Y45" secondAttribute="top" constant="14" id="eFz-Ql-ecm"/>
+                <constraint firstItem="Uim-vt-28A" firstAttribute="centerX" secondItem="4GU-Co-Y45" secondAttribute="centerX" id="knK-6e-uQj"/>
+                <constraint firstItem="rL9-Ov-2wN" firstAttribute="centerX" secondItem="4GU-Co-Y45" secondAttribute="centerX" id="tGf-yL-Wnd"/>
+                <constraint firstItem="Keg-YD-rEf" firstAttribute="top" secondItem="Uim-vt-28A" secondAttribute="bottom" constant="24" id="v4x-wb-e69"/>
+                <constraint firstItem="Keg-YD-rEf" firstAttribute="leading" secondItem="4GU-Co-Y45" secondAttribute="leading" constant="69" id="vPl-VQ-mGo"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-534" y="870.5"/>
+        </view>
+        <view tag="101" contentMode="scaleToFill" id="M5t-9M-fkj">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" tag="12" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6P8-1T-1bH">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="6P8-1T-1bH" secondAttribute="trailing" id="0WX-Gd-Ny4"/>
+                <constraint firstAttribute="bottom" secondItem="6P8-1T-1bH" secondAttribute="bottom" id="2li-9U-EPL"/>
+                <constraint firstItem="6P8-1T-1bH" firstAttribute="top" secondItem="M5t-9M-fkj" secondAttribute="top" id="JgB-cY-zPz"/>
+                <constraint firstItem="6P8-1T-1bH" firstAttribute="leading" secondItem="M5t-9M-fkj" secondAttribute="leading" id="qEc-QX-ojY"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="256" y="304"/>
+        </view>
+        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="I4O-op-wPb">
+            <rect key="frame" x="0.0" y="0.0" width="240" height="243"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <point key="canvasLocation" x="-431" y="74.5"/>
+        </imageView>
+        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="r76-Zo-9bp">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="333"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-39" y="990.5"/>
+        </scrollView>
+    </objects>
+    <resources>
+        <image name="multi" width="212" height="212"/>
+        <image name="single" width="165" height="165"/>
+    </resources>
+</document>

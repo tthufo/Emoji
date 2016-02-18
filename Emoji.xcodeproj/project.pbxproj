@@ -1,0 +1,549 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		108A6B89AADDBF2DDCF0C9B1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8651730977248D19FCC87DA /* libPods.a */; };
+		FC59CCA11C70B11E00236614 /* M13ContextMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = FC59CC9E1C70B11E00236614 /* M13ContextMenu.m */; };
+		FC59CCA21C70B11E00236614 /* M13ContextMenuItemIOS7.m in Sources */ = {isa = PBXBuildFile; fileRef = FC59CCA01C70B11E00236614 /* M13ContextMenuItemIOS7.m */; };
+		FC59CCA41C73052700236614 /* format.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC59CCA31C73052700236614 /* format.plist */; };
+		FC59CCA61C730B8600236614 /* Cells.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC59CCA51C730B8600236614 /* Cells.xib */; };
+		FC59CCA81C7323C000236614 /* options.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC59CCA71C7323C000236614 /* options.plist */; };
+		FC59CCAA1C73244C00236614 /* Option.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC59CCA91C73244C00236614 /* Option.xib */; };
+		FCC64F8F1C702A0000C412CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC64F8E1C702A0000C412CD /* main.m */; };
+		FCC64F921C702A0000C412CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC64F911C702A0000C412CD /* AppDelegate.m */; };
+		FCC64F951C702A0000C412CD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC64F941C702A0000C412CD /* ViewController.m */; };
+		FCC64F981C702A0000C412CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCC64F961C702A0000C412CD /* Main.storyboard */; };
+		FCC64F9A1C702A0000C412CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCC64F991C702A0000C412CD /* Assets.xcassets */; };
+		FCC64F9D1C702A0000C412CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCC64F9B1C702A0000C412CD /* LaunchScreen.storyboard */; };
+		FCC64FAB1C702B8900C412CD /* StartAds.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC64FA81C702B8900C412CD /* StartAds.m */; };
+		FCC64FAC1C702B8900C412CD /* StartApp.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FCC64FA91C702B8900C412CD /* StartApp.bundle */; };
+		FCC64FAD1C702B8900C412CD /* StartApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCC64FAA1C702B8900C412CD /* StartApp.framework */; };
+		FCC64FB71C702BA000C412CD /* CustomIOS7AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC64FAF1C702BA000C412CD /* CustomIOS7AlertView.m */; };
+		FCC64FB81C702BA000C412CD /* EM_MenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC64FB11C702BA000C412CD /* EM_MenuView.m */; };
+		FCC64FB91C702BA000C412CD /* menu.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCC64FB21C702BA000C412CD /* menu.plist */; };
+		FCC64FBA1C702BA000C412CD /* menuShort.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCC64FB31C702BA000C412CD /* menuShort.plist */; };
+		FCC64FBB1C702BA000C412CD /* sideMenu.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCC64FB41C702BA000C412CD /* sideMenu.plist */; };
+		FCC64FBC1C702BA000C412CD /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC64FB61C702BA000C412CD /* XMLReader.m */; };
+		FCC64FC31C702BC200C412CD /* EM_Cells.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCC64FBE1C702BC200C412CD /* EM_Cells.xib */; };
+		FCC64FC41C702BC200C412CD /* EM_First_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC64FC01C702BC200C412CD /* EM_First_ViewController.m */; };
+		FCC64FC51C702BC200C412CD /* EM_First_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCC64FC11C702BC200C412CD /* EM_First_ViewController.xib */; };
+		FCC64FC61C702BC200C412CD /* EM_Menu.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCC64FC21C702BC200C412CD /* EM_Menu.xib */; };
+		FCC64FCA1C702BEE00C412CD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FCC64FC71C702BEE00C412CD /* Default-568h@2x.png */; };
+		FCC64FCB1C702BEE00C412CD /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = FCC64FC81C702BEE00C412CD /* Default.png */; };
+		FCC64FCC1C702BEE00C412CD /* Default~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = FCC64FC91C702BEE00C412CD /* Default~iphone.png */; };
+		FCC64FCF1C702DE600C412CD /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCC64FCE1C702DE600C412CD /* CoreFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0B41668846FB25C76A3EEAD8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		A349CA152A6D9BF13CAE5836 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		A8651730977248D19FCC87DA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC59CC9D1C70B11E00236614 /* M13ContextMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M13ContextMenu.h; sourceTree = "<group>"; };
+		FC59CC9E1C70B11E00236614 /* M13ContextMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M13ContextMenu.m; sourceTree = "<group>"; };
+		FC59CC9F1C70B11E00236614 /* M13ContextMenuItemIOS7.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M13ContextMenuItemIOS7.h; sourceTree = "<group>"; };
+		FC59CCA01C70B11E00236614 /* M13ContextMenuItemIOS7.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M13ContextMenuItemIOS7.m; sourceTree = "<group>"; };
+		FC59CCA31C73052700236614 /* format.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = format.plist; sourceTree = "<group>"; };
+		FC59CCA51C730B8600236614 /* Cells.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cells.xib; sourceTree = "<group>"; };
+		FC59CCA71C7323C000236614 /* options.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = options.plist; sourceTree = "<group>"; };
+		FC59CCA91C73244C00236614 /* Option.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Option.xib; sourceTree = "<group>"; };
+		FCC64F8A1C702A0000C412CD /* Emoji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Emoji.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCC64F8E1C702A0000C412CD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FCC64F901C702A0000C412CD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FCC64F911C702A0000C412CD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FCC64F931C702A0000C412CD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FCC64F941C702A0000C412CD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FCC64F971C702A0000C412CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FCC64F991C702A0000C412CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FCC64F9C1C702A0000C412CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FCC64F9E1C702A0000C412CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCC64FA71C702B8900C412CD /* StartAds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartAds.h; sourceTree = "<group>"; };
+		FCC64FA81C702B8900C412CD /* StartAds.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartAds.m; sourceTree = "<group>"; };
+		FCC64FA91C702B8900C412CD /* StartApp.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = StartApp.bundle; sourceTree = "<group>"; };
+		FCC64FAA1C702B8900C412CD /* StartApp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = StartApp.framework; sourceTree = "<group>"; };
+		FCC64FAE1C702BA000C412CD /* CustomIOS7AlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomIOS7AlertView.h; sourceTree = "<group>"; };
+		FCC64FAF1C702BA000C412CD /* CustomIOS7AlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomIOS7AlertView.m; sourceTree = "<group>"; };
+		FCC64FB01C702BA000C412CD /* EM_MenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EM_MenuView.h; sourceTree = "<group>"; };
+		FCC64FB11C702BA000C412CD /* EM_MenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EM_MenuView.m; sourceTree = "<group>"; };
+		FCC64FB21C702BA000C412CD /* menu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = menu.plist; sourceTree = "<group>"; };
+		FCC64FB31C702BA000C412CD /* menuShort.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = menuShort.plist; sourceTree = "<group>"; };
+		FCC64FB41C702BA000C412CD /* sideMenu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = sideMenu.plist; sourceTree = "<group>"; };
+		FCC64FB51C702BA000C412CD /* XMLReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLReader.h; sourceTree = "<group>"; };
+		FCC64FB61C702BA000C412CD /* XMLReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLReader.m; sourceTree = "<group>"; };
+		FCC64FBE1C702BC200C412CD /* EM_Cells.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EM_Cells.xib; sourceTree = "<group>"; };
+		FCC64FBF1C702BC200C412CD /* EM_First_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EM_First_ViewController.h; sourceTree = "<group>"; };
+		FCC64FC01C702BC200C412CD /* EM_First_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EM_First_ViewController.m; sourceTree = "<group>"; };
+		FCC64FC11C702BC200C412CD /* EM_First_ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EM_First_ViewController.xib; sourceTree = "<group>"; };
+		FCC64FC21C702BC200C412CD /* EM_Menu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EM_Menu.xib; sourceTree = "<group>"; };
+		FCC64FC71C702BEE00C412CD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		FCC64FC81C702BEE00C412CD /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		FCC64FC91C702BEE00C412CD /* Default~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default~iphone.png"; sourceTree = "<group>"; };
+		FCC64FCD1C702BFD00C412CD /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		FCC64FCE1C702DE600C412CD /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FCC64F871C702A0000C412CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCC64FCF1C702DE600C412CD /* CoreFoundation.framework in Frameworks */,
+				108A6B89AADDBF2DDCF0C9B1 /* libPods.a in Frameworks */,
+				FCC64FAD1C702B8900C412CD /* StartApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		353F70437D50B7D454787463 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FCC64FCE1C702DE600C412CD /* CoreFoundation.framework */,
+				A8651730977248D19FCC87DA /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4BB8F1F762337DDFF78DC978 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A349CA152A6D9BF13CAE5836 /* Pods.debug.xcconfig */,
+				0B41668846FB25C76A3EEAD8 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FCC64F811C702A0000C412CD = {
+			isa = PBXGroup;
+			children = (
+				FCC64F8C1C702A0000C412CD /* Emoji */,
+				FCC64F8B1C702A0000C412CD /* Products */,
+				4BB8F1F762337DDFF78DC978 /* Pods */,
+				353F70437D50B7D454787463 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FCC64F8B1C702A0000C412CD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FCC64F8A1C702A0000C412CD /* Emoji.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FCC64F8C1C702A0000C412CD /* Emoji */ = {
+			isa = PBXGroup;
+			children = (
+				FCC64FBD1C702BA700C412CD /* ViewController */,
+				FCC64FA61C702B6600C412CD /* Plist */,
+				FCC64FA51C702B6000C412CD /* Ads */,
+				FCC64FA41C702B3E00C412CD /* Default */,
+				FCC64F901C702A0000C412CD /* AppDelegate.h */,
+				FCC64F911C702A0000C412CD /* AppDelegate.m */,
+				FCC64F8D1C702A0000C412CD /* Supporting Files */,
+			);
+			name = Emoji;
+			path = FaceEmoticons;
+			sourceTree = "<group>";
+		};
+		FCC64F8D1C702A0000C412CD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FCC64FC71C702BEE00C412CD /* Default-568h@2x.png */,
+				FCC64FC81C702BEE00C412CD /* Default.png */,
+				FCC64FC91C702BEE00C412CD /* Default~iphone.png */,
+				FCC64F8E1C702A0000C412CD /* main.m */,
+				FCC64FCD1C702BFD00C412CD /* PrefixHeader.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FCC64FA41C702B3E00C412CD /* Default */ = {
+			isa = PBXGroup;
+			children = (
+				FCC64F931C702A0000C412CD /* ViewController.h */,
+				FCC64F941C702A0000C412CD /* ViewController.m */,
+				FCC64F961C702A0000C412CD /* Main.storyboard */,
+				FCC64F991C702A0000C412CD /* Assets.xcassets */,
+				FCC64F9B1C702A0000C412CD /* LaunchScreen.storyboard */,
+				FCC64F9E1C702A0000C412CD /* Info.plist */,
+			);
+			name = Default;
+			sourceTree = "<group>";
+		};
+		FCC64FA51C702B6000C412CD /* Ads */ = {
+			isa = PBXGroup;
+			children = (
+				FCC64FA71C702B8900C412CD /* StartAds.h */,
+				FCC64FA81C702B8900C412CD /* StartAds.m */,
+				FCC64FA91C702B8900C412CD /* StartApp.bundle */,
+				FCC64FAA1C702B8900C412CD /* StartApp.framework */,
+			);
+			name = Ads;
+			sourceTree = "<group>";
+		};
+		FCC64FA61C702B6600C412CD /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+				FC59CC9D1C70B11E00236614 /* M13ContextMenu.h */,
+				FC59CC9E1C70B11E00236614 /* M13ContextMenu.m */,
+				FC59CC9F1C70B11E00236614 /* M13ContextMenuItemIOS7.h */,
+				FC59CCA01C70B11E00236614 /* M13ContextMenuItemIOS7.m */,
+				FCC64FAE1C702BA000C412CD /* CustomIOS7AlertView.h */,
+				FCC64FAF1C702BA000C412CD /* CustomIOS7AlertView.m */,
+				FCC64FB01C702BA000C412CD /* EM_MenuView.h */,
+				FCC64FB11C702BA000C412CD /* EM_MenuView.m */,
+				FCC64FB21C702BA000C412CD /* menu.plist */,
+				FCC64FB31C702BA000C412CD /* menuShort.plist */,
+				FCC64FB41C702BA000C412CD /* sideMenu.plist */,
+				FCC64FB51C702BA000C412CD /* XMLReader.h */,
+				FCC64FB61C702BA000C412CD /* XMLReader.m */,
+			);
+			name = Plist;
+			sourceTree = "<group>";
+		};
+		FCC64FBD1C702BA700C412CD /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FCC64FBE1C702BC200C412CD /* EM_Cells.xib */,
+				FCC64FBF1C702BC200C412CD /* EM_First_ViewController.h */,
+				FCC64FC01C702BC200C412CD /* EM_First_ViewController.m */,
+				FCC64FC11C702BC200C412CD /* EM_First_ViewController.xib */,
+				FCC64FC21C702BC200C412CD /* EM_Menu.xib */,
+				FC59CCA51C730B8600236614 /* Cells.xib */,
+				FC59CCA91C73244C00236614 /* Option.xib */,
+				FC59CCA31C73052700236614 /* format.plist */,
+				FC59CCA71C7323C000236614 /* options.plist */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FCC64F891C702A0000C412CD /* Emoji */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCC64FA11C702A0000C412CD /* Build configuration list for PBXNativeTarget "Emoji" */;
+			buildPhases = (
+				A3F37B80418EA6053E0BD43B /* Check Pods Manifest.lock */,
+				FCC64F861C702A0000C412CD /* Sources */,
+				FCC64F871C702A0000C412CD /* Frameworks */,
+				FCC64F881C702A0000C412CD /* Resources */,
+				4D49A99B57238A2351A27E0A /* Embed Pods Frameworks */,
+				05C66E64C2F608212A216015 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Emoji;
+			productName = FaceEmoticons;
+			productReference = FCC64F8A1C702A0000C412CD /* Emoji.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FCC64F821C702A0000C412CD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = thanhhaitran;
+				TargetAttributes = {
+					FCC64F891C702A0000C412CD = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 2A57FFFJMN;
+					};
+				};
+			};
+			buildConfigurationList = FCC64F851C702A0000C412CD /* Build configuration list for PBXProject "Emoji" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FCC64F811C702A0000C412CD;
+			productRefGroup = FCC64F8B1C702A0000C412CD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FCC64F891C702A0000C412CD /* Emoji */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FCC64F881C702A0000C412CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCC64FC61C702BC200C412CD /* EM_Menu.xib in Resources */,
+				FCC64FCA1C702BEE00C412CD /* Default-568h@2x.png in Resources */,
+				FCC64FB91C702BA000C412CD /* menu.plist in Resources */,
+				FC59CCA81C7323C000236614 /* options.plist in Resources */,
+				FCC64FC31C702BC200C412CD /* EM_Cells.xib in Resources */,
+				FCC64FCC1C702BEE00C412CD /* Default~iphone.png in Resources */,
+				FCC64F9D1C702A0000C412CD /* LaunchScreen.storyboard in Resources */,
+				FCC64F9A1C702A0000C412CD /* Assets.xcassets in Resources */,
+				FCC64FC51C702BC200C412CD /* EM_First_ViewController.xib in Resources */,
+				FCC64FCB1C702BEE00C412CD /* Default.png in Resources */,
+				FCC64FAC1C702B8900C412CD /* StartApp.bundle in Resources */,
+				FCC64FBB1C702BA000C412CD /* sideMenu.plist in Resources */,
+				FCC64FBA1C702BA000C412CD /* menuShort.plist in Resources */,
+				FCC64F981C702A0000C412CD /* Main.storyboard in Resources */,
+				FC59CCAA1C73244C00236614 /* Option.xib in Resources */,
+				FC59CCA61C730B8600236614 /* Cells.xib in Resources */,
+				FC59CCA41C73052700236614 /* format.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		05C66E64C2F608212A216015 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4D49A99B57238A2351A27E0A /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3F37B80418EA6053E0BD43B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FCC64F861C702A0000C412CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCC64F951C702A0000C412CD /* ViewController.m in Sources */,
+				FCC64FB81C702BA000C412CD /* EM_MenuView.m in Sources */,
+				FCC64F921C702A0000C412CD /* AppDelegate.m in Sources */,
+				FCC64FC41C702BC200C412CD /* EM_First_ViewController.m in Sources */,
+				FCC64F8F1C702A0000C412CD /* main.m in Sources */,
+				FC59CCA21C70B11E00236614 /* M13ContextMenuItemIOS7.m in Sources */,
+				FC59CCA11C70B11E00236614 /* M13ContextMenu.m in Sources */,
+				FCC64FB71C702BA000C412CD /* CustomIOS7AlertView.m in Sources */,
+				FCC64FAB1C702B8900C412CD /* StartAds.m in Sources */,
+				FCC64FBC1C702BA000C412CD /* XMLReader.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FCC64F961C702A0000C412CD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FCC64F971C702A0000C412CD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FCC64F9B1C702A0000C412CD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FCC64F9C1C702A0000C412CD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FCC64F9F1C702A0000C412CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Thanh Hai Tran (N3994DUH8M)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Thanh Hai Tran (N3994DUH8M)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "8477a2b1-a4c1-4f2d-be83-1a8a4c9ca0ac";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FCC64FA01C702A0000C412CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Thanh Hai Tran (2A57FFFJMN)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Thanh Hai Tran (2A57FFFJMN)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "09c69914-ffc1-4371-b621-a6d245f17f2d";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FCC64FA21C702A0000C412CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A349CA152A6D9BF13CAE5836 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Thanh Hai Tran (N3994DUH8M)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Thanh Hai Tran (N3994DUH8M)";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FaceEmoticons",
+				);
+				GCC_PREFIX_HEADER = FaceEmoticons/PrefixHeader.pch;
+				INFOPLIST_FILE = FaceEmoticons/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = vn.vmgmedia.emoji;
+				PRODUCT_NAME = Emoji;
+				PROVISIONING_PROFILE = "8477a2b1-a4c1-4f2d-be83-1a8a4c9ca0ac";
+			};
+			name = Debug;
+		};
+		FCC64FA31C702A0000C412CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B41668846FB25C76A3EEAD8 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Thanh Hai Tran (2A57FFFJMN)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Thanh Hai Tran (2A57FFFJMN)";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FaceEmoticons",
+				);
+				GCC_PREFIX_HEADER = FaceEmoticons/PrefixHeader.pch;
+				INFOPLIST_FILE = FaceEmoticons/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = vn.vmgmedia.emoji;
+				PRODUCT_NAME = Emoji;
+				PROVISIONING_PROFILE = "09c69914-ffc1-4371-b621-a6d245f17f2d";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FCC64F851C702A0000C412CD /* Build configuration list for PBXProject "Emoji" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCC64F9F1C702A0000C412CD /* Debug */,
+				FCC64FA01C702A0000C412CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCC64FA11C702A0000C412CD /* Build configuration list for PBXNativeTarget "Emoji" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCC64FA21C702A0000C412CD /* Debug */,
+				FCC64FA31C702A0000C412CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FCC64F821C702A0000C412CD /* Project object */;
+}

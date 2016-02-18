@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>New</string>
+		<key>cat</key>
+		<string>https://store.line.me/stickershop/showcase/new_creators/en?page=%d</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Top </string>
+		<key>cat</key>
+		<string>https://store.line.me/stickershop/showcase/top_creators/en?page=%d</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Entertainment</string>
+		<key>cat</key>
+		<string>https://store.line.me/stickershop/showcase/new/en?page=%d&amp;category=8</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Fun</string>
+		<key>cat</key>
+		<string>http://www.mogicons.com/en/stickers/troll/?page=%d</string>
+	</dict>
+</array>
+</plist>

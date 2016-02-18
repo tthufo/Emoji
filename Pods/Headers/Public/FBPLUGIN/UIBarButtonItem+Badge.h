@@ -1,0 +1,1 @@
+../../../FBPLUGIN/Pod/Classes/UIBarButtonItem+Badge.h

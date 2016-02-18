@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>background</key>
+	<string>#136BFA</string>
+	<key>images</key>
+	<dict>
+		<key>104</key>
+		<string>ima</string>
+	</dict>
+	<key>items</key>
+	<dict>
+		<key>101</key>
+		<string>title</string>
+	</dict>
+	<key>nib</key>
+	<string>Option</string>
+	<key>identifier</key>
+	<string>opt</string>
+	<key>height</key>
+	<string>150</string>
+</dict>
+</plist>

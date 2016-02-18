@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>Smiley Face</string>
+		<key>cat</key>
+		<string>http://emojipedia.org/people/</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Animals &amp; Nature</string>
+		<key>cat</key>
+		<string>http://emojipedia.org/nature/</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Food &amp; Drink</string>
+		<key>cat</key>
+		<string>http://emojipedia.org/food-drink/</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Activity</string>
+		<key>cat</key>
+		<string>http://emojipedia.org/activity/</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Travel &amp; Places</string>
+		<key>cat</key>
+		<string>http://emojipedia.org/travel-places/</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Objects</string>
+		<key>cat</key>
+		<string>http://emojipedia.org/objects/</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Symbols</string>
+		<key>cat</key>
+		<string>http://emojipedia.org/symbols/</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Flags</string>
+		<key>cat</key>
+		<string>http://emojipedia.org/flags/</string>
+	</dict>
+</array>
+</plist>
