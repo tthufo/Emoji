@@ -188,7 +188,6 @@ static DropButton * shareButton = nil;
         self.layer.masksToBounds = NO;
 
         tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, btn.size.width, 0)];
-        tableView.separatorStyle = _template[@"separator"] ? UITableViewCellSeparatorStyleSingleLine : UITableViewCellSeparatorStyleNone ;
         tableView.showsHorizontalScrollIndicator = NO;
         tableView.showsVerticalScrollIndicator = NO;
         tableView.delegate = self;
@@ -346,5 +345,20 @@ static DropButton * shareButton = nil;
     [cover removeFromSuperview];
 }
 
+
+@end
+
+
+@implementation DropButton (pList)
+
+- (void)setPListName:(NSString *)pListName
+{
+    self.pList = pListName;
+}
+
+- (NSString*)pListName
+{
+    return self.pList;
+}
 
 @end

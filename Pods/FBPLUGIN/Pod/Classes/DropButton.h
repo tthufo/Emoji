@@ -43,14 +43,20 @@ typedef void (^DropButtonCompletion)(id object);
 
 @property (nonatomic, retain) id <NIDropDownDelegate> delegate;
 
-@property(nonatomic, strong) UITableView * tableView;
+@property (nonatomic, strong) UITableView * tableView;
 
-@property(nonatomic, readwrite) int cellHeight;
+@property (nonatomic, readwrite) int cellHeight;
 
-@property(nonatomic, retain) NSDictionary * _template;
+@property (nonatomic, retain) NSDictionary * _template;
 
 - (void)hideDropDown;
 
 - (id)showDropDownWithRect:(CGRect)_rect andHeight:(CGFloat *)height andData:(NSArray *)data andDirection:(NSString *)_direction;
+
+@end
+
+@interface DropButton (pList)
+
+@property(nonatomic, assign) NSString* pListName;
 
 @end

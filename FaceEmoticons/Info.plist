@@ -50,5 +50,7 @@
 	<string>url</string>
 	<key>lang</key>
 	<false/>
+	<key>showAds</key>
+	<false/>
 </dict>
 </plist>

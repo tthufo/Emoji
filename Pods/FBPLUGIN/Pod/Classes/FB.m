@@ -163,8 +163,15 @@ static FB * instance = nil;
 
 - (void)requestFacebookInformation
 {
-    [self showSVHUD:@"Đang tải" andOption:0];
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"Info" ofType:@"plist"];
+    
+    NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfFile:path];
+    
+    [self showSVHUD:[dictionary responseForKey:@"lang"] ? @"Loading" : @"Đang tải" andOption:0];
+    
     [[[FBSDKGraphRequest alloc] initWithGraphPath:@"me" parameters:@{@"fields": @"id, name, email"}]
+     
      startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
          if (error)
          {
@@ -179,7 +186,7 @@ static FB * instance = nil;
 - (void)didRequestAvatarWithInfo:(NSDictionary *)dict
 {
     FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]
-                                  initWithGraphPath:[NSString stringWithFormat:@"me/picture?type=small&redirect=false"]
+                                  initWithGraphPath:[NSString stringWithFormat:@"me/?fields=picture,id,name"]
                                   parameters:nil
                                   HTTPMethod:@"GET"];
     [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,
@@ -189,7 +196,9 @@ static FB * instance = nil;
          if (!error)
          {
              NSMutableDictionary * data = [dict reFormat];
-             data[@"avatar"] = result[@"data"][@"url"];
+             
+             data[@"avatar"] = result[@"picture"][@"data"][@"url"];
+             
              completionBlock(@"ok",@{@"info":data} , 0, nil, error);
          }
          else

@@ -7,6 +7,8 @@
 
 #import <Foundation/Foundation.h>
 
+#import "ASIFormDataRequest.h"
+
 typedef void (^RequestCompletion)(NSString * responseString, NSError * error, BOOL isValidated);
 
 typedef void (^RequestCache)(NSString * cacheString);
@@ -27,7 +29,9 @@ typedef void (^RequestCache)(NSString * cacheString);
 
 - (void)initRequest;
 
-- (void)didRequestInfo:(NSDictionary*)dict withCache:(RequestCache)cache andCompletion:(RequestCompletion)completion;
+- (ASIFormDataRequest*)didRequestInfo:(NSDictionary*)dict withCache:(RequestCache)cache andCompletion:(RequestCompletion)completion;
+
+- (void)didInitWithUrl:(NSDictionary*)dict withCache:(RequestCache)cache andCompletion:(RequestCompletion)completion;
 
 - (void)registerPush;
 
@@ -36,5 +40,7 @@ typedef void (^RequestCache)(NSString * cacheString);
 - (void)didFailToRegisterForRemoteNotification:(NSError *)error;
 
 - (void)didReceiveRemoteNotification:(NSDictionary *)userInfo;
+
+- (BOOL)isConnectionAvailable;
 
 @end

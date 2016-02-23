@@ -9,8 +9,6 @@
 
 #import "Reachability.h"
 
-#import "ASIFormDataRequest.h"
-
 #import "JSONKit.h"
 
 #import "NSObject+Category.h"
@@ -84,6 +82,47 @@ static LTRequest *__sharedLTRequest = nil;
     self.lang = [dictionary responseForKey:@"lang"];
 }
 
+- (void)didInitWithUrl:(NSDictionary*)dict withCache:(RequestCache)cache andCompletion:(RequestCompletion)completion
+{
+    if([self getValue:dict[@"absoluteLink"]])
+    {
+        cache([self getValue:dict[@"absoluteLink"]]);
+    }
+    else
+    {
+        if([dict responseForKey:@"host"])
+        {
+            [(UIViewController*)dict[@"host"] showSVHUD: self.lang ? @"Loading" : @"Đang tải" andOption:0];
+        }
+    }
+    if([dict responseForKey:@"overrideLoading"])
+    {
+        if([dict responseForKey:@"host"])
+        {
+            [(UIViewController*)dict[@"host"] showSVHUD: self.lang ? @"Loading" : @"Đang tải" andOption:0];
+        }
+    }
+    
+    NSURL * requestUrl = [NSURL URLWithString:dict[@"absoluteLink"]];
+
+    NSError* error = nil;
+
+    NSData* htmlData = [NSData dataWithContentsOfURL:requestUrl options:NSDataReadingUncached error:&error];
+
+    if(error)
+    {
+        completion(nil,error,NO);
+    }
+    else
+    {
+        completion([NSString stringWithUTF8String:[htmlData bytes]],nil,YES);
+        
+        [self addValue:[NSString stringWithUTF8String:[htmlData bytes]] andKey:dict[@"absoluteLink"]];
+    }
+
+    [self hideSVHUD];
+}
+
 - (ASIFormDataRequest*)REQUEST
 {
     return [ASIFormDataRequest requestWithURL:[NSURL URLWithString:self.address]];
@@ -94,12 +133,13 @@ static LTRequest *__sharedLTRequest = nil;
     return [ASIFormDataRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@/%@", self.address, X]]];
 }
 
-- (void)didRequestInfo:(NSDictionary*)dict withCache:(RequestCache)cacheData andCompletion:(RequestCompletion)completion
+- (ASIFormDataRequest*)didRequestInfo:(NSDictionary*)dict withCache:(RequestCache)cacheData andCompletion:(RequestCompletion)completion
 {
     if(!self.address)
     {
         NSLog(@"Please setup request url in Plist");
-        return;
+        
+        return nil;
     }
     NSMutableDictionary * data = [dict mutableCopy];
     
@@ -107,7 +147,7 @@ static LTRequest *__sharedLTRequest = nil;
     
     data[@"cache"] = cacheData;
     
-    [self initRequest:data];
+    return [self didInitRequest:data];
 }
 
 - (BOOL)didRespond:(NSMutableDictionary*)dict andHost:(UIViewController*)host
@@ -151,7 +191,7 @@ static LTRequest *__sharedLTRequest = nil;
     return NO;
 }
 
-- (RequestCompletion)initRequest:(NSMutableDictionary*)dict
+- (ASIFormDataRequest*)didInitRequest:(NSMutableDictionary*)dict
 {
     NSMutableDictionary * post = nil;
     
@@ -161,7 +201,6 @@ static LTRequest *__sharedLTRequest = nil;
     
     if([dict responseForKey:@"method"])
     {
-        
         if([dict responseForKey:@"absoluteLink"])
         {
             request = [[ASIFormDataRequest alloc] initWithURL:[NSURL URLWithString:dict[@"absoluteLink"]]];
@@ -275,7 +314,7 @@ static LTRequest *__sharedLTRequest = nil;
         }
         else
         {
-            if([result responseForKindOfClass:@"ERR_CODE" andTarget:@"0"] && [[request.responseString objectFromJSONString] responseForKey:@"RESULT"])
+//            if([result responseForKindOfClass:@"ERR_CODE" andTarget:@"0"] && [[request.responseString objectFromJSONString] responseForKey:@"RESULT"])
             {
                 [self addValue:request.responseString andKey:[dict responseForKey:@"absoluteLink"] ? dict[@"absoluteLink"] : [post bv_jsonStringWithPrettyPrint:NO]];
             }
@@ -295,7 +334,7 @@ static LTRequest *__sharedLTRequest = nil;
     
     [request startAsynchronous];
     
-    return nil;
+    return request;
 }
 
 - (NSString*)returnGetUrl:(NSDictionary*)dict

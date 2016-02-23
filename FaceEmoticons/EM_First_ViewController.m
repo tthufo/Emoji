@@ -94,71 +94,44 @@
     
     sideMenuList = [[NSMutableArray alloc] initWithArray:@[@"Save",@"Copy",@"Share",@"Close"]];
     
-//    __block  EM_First_ViewController * weakSelf = self;
-//    
-//    [collectionView addFooterWithBlock:^{
-//        
-//        [weakSelf didLoadMore];
-//        
-//    }];
-    
     menu = [self returnView];
     
     sideMenu = [self returnSideMenu];
-    
-    [self didPrepareData:NO];
-    
-    self.title = @"";
-    
-    [[LTRequest sharedInstance] didRequestInfo:@{@"absoluteLink":@"https://dl.dropboxusercontent.com/s/negzxu2kw2pnh9o/Emoji.plist",@"overrideError":@(1),@"overrideLoading":@(1),@"host":self} withCache:^(NSString *cacheString) {
-    } andCompletion:^(NSString *responseString, NSError *error, BOOL isValidated) {
-        
-        NSData *data = [responseString dataUsingEncoding:NSUTF8StringEncoding];
-        NSError * er = nil;
-        NSDictionary *dict = [XMLReader dictionaryForXMLData:data
-                                                     options:XMLReaderOptionsProcessNamespaces
-                                                       error:&er];
-        
-        NSMutableDictionary * option = [[XMLReader recursionRemoveTextNode:dict] mutableCopy];
-        
-        [self didPrepareData:[option[@"plist"][@"dict"][@"key"] boolValue]];
-        
-        [self didRequestData];
-        
-    }];
     
     cover.frame = CGRectMake(0, 0, screenWidth, screenHeight);
     
     preview = [self returnImage:CGRectMake(15, (screenHeight - (screenWidth - (screenWidth * sideRatio)) - 30) / 2 - 15 , (screenWidth - (screenWidth * sideRatio)) - 30 , (screenWidth - (screenWidth * sideRatio)) - 30)];
     
-//    [[StartAds sharedInstance] didShowBannerAdsWithInfor:@{@"host":self,@"Y":@(screenHeight - 64 - 50)} andCompletion:^(BannerEvent event, NSError *error, id bannerAd) {
-//        switch (event)
-//        {
-//            case AdsDone:
-//            {
-////                collectionView.contentInset = UIEdgeInsetsMake(0, 0, 50, 0);
-//            }
-//                break;
-//            case AdsFailed:
-//            {
-////                collectionView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
-//            }
-//                break;
-//            case AdsWillPresent:
-//            {
-//                
-//            }
-//                break;
-//            case AdsWillLeave:
-//            {
-//                
-//            }
-//                break;
-//            default:
-//                break;
-//        }
-//    }];
-    
+    if([[self infoPlist][@"showAds"] boolValue])
+    {
+        [[StartAds sharedInstance] didShowBannerAdsWithInfor:@{@"host":self,@"Y":@(screenHeight - 64 - 50)} andCompletion:^(BannerEvent event, NSError *error, id bannerAd) {
+            switch (event)
+            {
+                case AdsDone:
+                {
+                    
+                }
+                    break;
+                case AdsFailed:
+                {
+                    
+                }
+                    break;
+                case AdsWillPresent:
+                {
+                    
+                }
+                    break;
+                case AdsWillLeave:
+                {
+                    
+                }
+                    break;
+                default:
+                    break;
+            }
+        }];
+    }
     M13ContextMenuItemIOS7 *bookmarkItem = [[M13ContextMenuItemIOS7 alloc] initWithUnselectedIcon:[UIImage imageNamed:@"Fbook"] selectedIcon:[UIImage imageNamed:@"Fbook"]];
     M13ContextMenuItemIOS7 *uploadItem = [[M13ContextMenuItemIOS7 alloc] initWithUnselectedIcon:[UIImage imageNamed:@"Safari"] selectedIcon:[UIImage imageNamed:@"Safari"]];
     M13ContextMenuItemIOS7 *trashIcon = [[M13ContextMenuItemIOS7 alloc] initWithUnselectedIcon:[UIImage imageNamed:@"VOC_icon"] selectedIcon:[UIImage imageNamed:@"VOC_icon"]];
@@ -171,6 +144,10 @@
     
     UILongPressGestureRecognizer * press = [[UILongPressGestureRecognizer alloc] initWithTarget:contextMenu action:@selector(showMenuUponActivationOfGetsure:)];
     [(UIButton*)[self withView:previewEmo tag:12] addGestureRecognizer:press];
+    
+    [self didPrepareData:YES];
+    
+    [self didRequestData];
 }
 
 - (void)didBeginShowMenu
@@ -194,9 +171,7 @@
 
 - (BOOL)shouldShowContextMenu:(M13ContextMenu *)contextMenu atPoint:(CGPoint)point
 {
-    NSIndexPath* indexPath = [collectionView indexPathForItemAtPoint:point];
-    UICollectionViewCell* cell = [collectionView cellForItemAtIndexPath:indexPath];
-    return cell != nil;
+    return YES;
 }
 
 - (void)contextMenu:(M13ContextMenu *)contextMenu atPoint:(CGPoint)point didSelectItemAtIndex:(NSInteger)index
@@ -300,7 +275,6 @@
     
     collectionView.contentInset = UIEdgeInsetsMake(0, 0,[[System getValue:@"option"] boolValue] ? 100 : 50, 0);
 }
-
 
 
 - (void)didPressMenu
@@ -510,69 +484,58 @@
     [self didRequestData];
 }
 
-- (void)didRequestData
+- (void)didReceiveData:(NSString*)data andIsReset:(BOOL)isReset
 {
-    [self showSVHUD:@"Loading" andOption:0];
-
     if(count == 1)
-    {
         [dataList removeAllObjects];
-    }
     
-    NSURL * requestUrl = [NSURL URLWithString:[NSString stringWithFormat:url]];//, count]];
+    TFHpple *parser = [TFHpple hppleWithHTMLData:[data dataUsingEncoding:NSUTF8StringEncoding]];
     
-    NSString * cc = [NSString stringWithFormat:@"%i",count + 100];
+    NSString *pathQuery = @"//ul[@class='emoji-list']";
     
-    dispatch_queue_t imageQueue = dispatch_queue_create([cc UTF8String],NULL);
+    NSArray *nodes = [parser searchWithXPathQuery:pathQuery];
     
-    dispatch_async(imageQueue, ^{
-        
-        NSError* error = nil;
-        
-        NSData* htmlData = [NSData dataWithContentsOfURL:requestUrl options:NSDataReadingUncached error:&error];
-        
-//        NSLog(@"%@",[NSString stringWithUTF8String:[htmlData bytes]]);
-        
-        TFHpple *parser = [TFHpple hppleWithHTMLData:htmlData];
-        
-        NSString *pathQuery = @"//ul[@class='emoji-list']";
-        
-        NSArray *nodes = [parser searchWithXPathQuery:pathQuery];
-        
-        for (TFHppleElement *element in nodes)
+    for (TFHppleElement *element in nodes)
+    {
+        for(TFHppleElement *child in element.children)
         {
-            for(TFHppleElement *child in element.children)
+            for(TFHppleElement * c in child.children)
             {
-                for(TFHppleElement * c in child.children)
+                for(TFHppleElement * last in c.children)
                 {
-                    for(TFHppleElement * last in c.children)
+                    for(TFHppleElement * end in last.children)
                     {
-                        for(TFHppleElement * end in last.children)
+                        if([end content])
                         {
-                            if([end content])
-                            {
-                                [dataList addObject:@{@"image":[end content]}];
-                            }
+                            [dataList addObject:@{@"image":[end content]}];
                         }
                     }
                 }
             }
         }
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            
-            [collectionView reloadData];
-            
-            [collectionView footerEndRefreshing];
-            
-            [self hideSVHUD];
+    }
+    
+    [collectionView reloadData];
+    
+    if(isReset)
+        [collectionView setContentOffset:CGPointZero animated:NO];
+}
 
-            if(count == 1)
-                
-                [collectionView setContentOffset:CGPointZero animated:NO];
-            
-        });
-    });
+- (void)didRequestData
+{
+    if(count == 1)
+    {
+        [dataList removeAllObjects];
+    }
+    [[LTRequest sharedInstance] didInitWithUrl:@{@"absoluteLink":url,@"host":self} withCache:^(NSString *cacheString) {
+        
+        [self didReceiveData:cacheString andIsReset:YES];
+        
+    } andCompletion:^(NSString *responseString, NSError *error, BOOL isValidated) {
+        
+        [self didReceiveData:responseString andIsReset:NO];
+
+    }];
 }
 
 - (NSInteger)tableView:(UITableView *)_tableView numberOfRowsInSection:(NSInteger)section
@@ -804,33 +767,36 @@
 
 - (void)showAds
 {
-//    [[StartAds sharedInstance] didShowFullAdsWithInfor:@{} andCompletion:^(BannerEvent event, NSError *error, id bannerAd) {
-//        switch (event)
-//        {
-//            case AdsDone:
-//            {
-//                
-//            }
-//                break;
-//            case AdsFailed:
-//            {
-//                
-//            }
-//                break;
-//            case AdsWillPresent:
-//            {
-//                
-//            }
-//                break;
-//            case AdsWillLeave:
-//            {
-//                
-//            }
-//                break;
-//            default:
-//                break;
-//        }
-//    }];
+    if([[self infoPlist][@"showAds"] boolValue])
+    {
+        [[StartAds sharedInstance] didShowFullAdsWithInfor:@{} andCompletion:^(BannerEvent event, NSError *error, id bannerAd) {
+            switch (event)
+            {
+                case AdsDone:
+                {
+                    
+                }
+                    break;
+                case AdsFailed:
+                {
+                    
+                }
+                    break;
+                case AdsWillPresent:
+                {
+                    
+                }
+                    break;
+                case AdsWillLeave:
+                {
+                    
+                }
+                    break;
+                default:
+                    break;
+            }
+        }];
+    }
 }
 
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
