@@ -70,6 +70,6 @@
 
 #import "EM_MenuView.h"
 
-#import "StartAds.h"
+#import "Ads.h"
 
 #endif /* PrefixHeader_pch */

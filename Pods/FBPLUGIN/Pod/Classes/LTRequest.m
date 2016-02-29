@@ -13,6 +13,8 @@
 
 #import "NSObject+Category.h"
 
+#import "AVHexColor.h"
+
 static LTRequest *__sharedLTRequest = nil;
 
 @implementation LTRequest
@@ -64,6 +66,7 @@ static LTRequest *__sharedLTRequest = nil;
 - (void)initRequest
 {
     NSString *path = [[NSBundle mainBundle] pathForResource:@"Info" ofType:@"plist"];
+    
     NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfFile:path];
     
     if(!dictionary)
@@ -80,6 +83,41 @@ static LTRequest *__sharedLTRequest = nil;
         self.address = dictionary[@"host"];
     }
     self.lang = [dictionary responseForKey:@"lang"];
+    
+//    if([UINavigationBar conformsToProtocol:@protocol(UIAppearanceContainer)])
+//    {
+//        if([dictionary responseForKey:@"tintColor"])
+//        {
+//            [UINavigationBar appearance].tintColor = [AVHexColor colorWithHexString:dictionary[@"tintColor"]];
+//        }
+//    }
+//    
+//    if([[[[UIApplication sharedApplication] delegate] window].rootViewController isKindOfClass:[UINavigationController class]])
+//    {
+//        UINavigationController * nav = (UINavigationController*)[[[UIApplication sharedApplication] delegate] window].rootViewController;
+//        
+//        if([dictionary responseForKey:@"titleColor"])
+//        {
+//            [nav.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[AVHexColor colorWithHexString:dictionary[@"titleColor"]]}];
+//        }
+//        
+//        NSArray *ver = [[UIDevice currentDevice].systemVersion componentsSeparatedByString:@"."];
+//        if ([[ver objectAtIndex:0] intValue] >= 7)
+//        {
+//            if([dictionary responseForKey:@"barTintColor"])
+//            {
+//                nav.navigationBar.barTintColor = [AVHexColor colorWithHexString:dictionary[@"barTintColor"]];
+//                nav.navigationBar.translucent = NO;
+//            }
+//        }
+//        else
+//        {
+//            if([dictionary responseForKey:@"barTintColor"])
+//            {
+//                nav.navigationBar.tintColor = [AVHexColor colorWithHexString:dictionary[@"barTintColor"]];
+//            }
+//        }
+//    }
 }
 
 - (void)didInitWithUrl:(NSDictionary*)dict withCache:(RequestCache)cache andCompletion:(RequestCompletion)completion

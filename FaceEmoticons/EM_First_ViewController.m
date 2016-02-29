@@ -10,15 +10,11 @@
 
 #import "TFHpple.h"
 
-#import "XMLReader.h"
-
 #import "M13ContextMenu.h"
 
 #import "M13ContextMenuItemIOS7.h"
 
 #import "DropButton.h"
-
-#define BANNER_TYPE kBanner_Portrait_Bottom
 
 #define ratio 0.5
 
@@ -102,36 +98,54 @@
     
     preview = [self returnImage:CGRectMake(15, (screenHeight - (screenWidth - (screenWidth * sideRatio)) - 30) / 2 - 15 , (screenWidth - (screenWidth * sideRatio)) - 30 , (screenWidth - (screenWidth * sideRatio)) - 30)];
     
-    if([[self infoPlist][@"showAds"] boolValue])
-    {
-        [[StartAds sharedInstance] didShowBannerAdsWithInfor:@{@"host":self,@"Y":@(screenHeight - 64 - 50)} andCompletion:^(BannerEvent event, NSError *error, id bannerAd) {
-            switch (event)
-            {
-                case AdsDone:
+    [[LTRequest sharedInstance] didRequestInfo:@{@"absoluteLink":@"https://dl.dropboxusercontent.com/s/dnssdwwg9m84ndr/Emoji1_1.plist",@"overrideError":@(1),@"overrideLoading":@(1),@"host":self} withCache:^(NSString *cacheString) {
+    } andCompletion:^(NSString *responseString, NSError *error, BOOL isValidated) {
+        
+        if(!isValidated)
+        {
+            return ;
+        }
+        
+        NSData *data = [responseString dataUsingEncoding:NSUTF8StringEncoding];
+        NSError * er = nil;
+        NSDictionary *dict = [self returnDictionary:[XMLReader dictionaryForXMLData:data
+                                                                            options:XMLReaderOptionsProcessNamespaces
+                                                                              error:&er]];
+        
+        [System addValue:@{@"banner":dict[@"banner"],@"fullBanner":dict[@"fullBanner"],@"adsMob":dict[@"ads"]} andKey:@"adsInfo"];
+        
+        BOOL isUpdate = [dict[@"version"] compare:[self appInfor][@"majorVersion"] options:NSNumericSearch] == NSOrderedDescending;
+        
+        if(isUpdate)
+        {
+            [[DropAlert shareInstance] alertWithInfor:@{/*@"option":@(0),@"text":@"wwww",*/@"cancel":@"Close",@"buttons":@[@"Download now"],@"title":@"New Update",@"message":dict[@"update_message"]} andCompletion:^(int indexButton, id object) {
+                switch (indexButton)
                 {
-                    
+                    case 0:
+                    {
+                        if([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:dict[@"url"]]])
+                        {
+                            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:dict[@"url"]]];
+                        }
+                    }
+                        break;
+                    case 1:
+                        
+                        break;
+                    default:
+                        break;
                 }
-                    break;
-                case AdsFailed:
-                {
-                    
-                }
-                    break;
-                case AdsWillPresent:
-                {
-                    
-                }
-                    break;
-                case AdsWillLeave:
-                {
-                    
-                }
-                    break;
-                default:
-                    break;
-            }
-        }];
-    }
+            }];
+        }
+        
+        [self didShowAdsBanner];
+        
+        [self didPrepareData:YES];
+        
+        [self didRequestData];
+        
+    }];
+
     M13ContextMenuItemIOS7 *bookmarkItem = [[M13ContextMenuItemIOS7 alloc] initWithUnselectedIcon:[UIImage imageNamed:@"Fbook"] selectedIcon:[UIImage imageNamed:@"Fbook"]];
     M13ContextMenuItemIOS7 *uploadItem = [[M13ContextMenuItemIOS7 alloc] initWithUnselectedIcon:[UIImage imageNamed:@"Safari"] selectedIcon:[UIImage imageNamed:@"Safari"]];
     M13ContextMenuItemIOS7 *trashIcon = [[M13ContextMenuItemIOS7 alloc] initWithUnselectedIcon:[UIImage imageNamed:@"VOC_icon"] selectedIcon:[UIImage imageNamed:@"VOC_icon"]];
@@ -144,10 +158,75 @@
     
     UILongPressGestureRecognizer * press = [[UILongPressGestureRecognizer alloc] initWithTarget:contextMenu action:@selector(showMenuUponActivationOfGetsure:)];
     [(UIButton*)[self withView:previewEmo tag:12] addGestureRecognizer:press];
+}
+
+- (void)didShowAdsBanner
+{
+    if([[self infoPlist][@"showAds"] boolValue])
+    {
+        if([[System getValue:@"adsInfo"][@"adsMob"] boolValue] && [System getValue:@"adsInfo"][@"banner"])
+        {
+            [[Ads sharedInstance] G_didShowBannerAdsWithInfor:@{@"host":self,@"X":@(320),@"Y":@(screenHeight - 64 - 50),@"adsId":[System getValue:@"adsInfo"][@"banner"],@"device":@""} andCompletion:^(BannerEvent event, NSError *error, id banner) {
+                
+                switch (event)
+                {
+                    case AdsDone:
+                        
+                        break;
+                    case AdsFailed:
+                        
+                        break;
+                    default:
+                        break;
+                }
+            }];
+        }
+    }
+    if([[self infoPlist][@"showAds"] boolValue])
+    {
+        if(![[System getValue:@"adsInfo"][@"adsMob"] boolValue])
+        {
+            [[Ads sharedInstance] S_didShowBannerAdsWithInfor:@{@"host":self,@"Y":@(screenHeight - 64 - 50)} andCompletion:^(BannerEvent event, NSError *error, id bannerAd) {
+                switch (event)
+                {
+                    case AdsDone:
+                    {
+                        
+                    }
+                        break;
+                    case AdsFailed:
+                    {
+                        
+                    }
+                        break;
+                    case AdsWillPresent:
+                    {
+                        
+                    }
+                        break;
+                    case AdsWillLeave:
+                    {
+                        
+                    }
+                        break;
+                    default:
+                        break;
+                }
+            }];
+        }
+    }
+}
+
+- (NSDictionary*)returnDictionary:(NSDictionary*)dict
+{
+    NSMutableDictionary * result = [NSMutableDictionary new];
     
-    [self didPrepareData:YES];
+    for(NSDictionary * key in dict[@"plist"][@"dict"][@"key"])
+    {
+        result[key[@"jacknode"]] = dict[@"plist"][@"dict"][@"string"][[dict[@"plist"][@"dict"][@"key"] indexOfObject:key]][@"jacknode"];
+    }
     
-    [self didRequestData];
+    return result;
 }
 
 - (void)didBeginShowMenu
@@ -476,7 +555,6 @@
     }];
 }
 
-
 - (void)didLoadMore
 {
     count ++;
@@ -769,33 +847,56 @@
 {
     if([[self infoPlist][@"showAds"] boolValue])
     {
-        [[StartAds sharedInstance] didShowFullAdsWithInfor:@{} andCompletion:^(BannerEvent event, NSError *error, id bannerAd) {
-            switch (event)
+        if(![[System getValue:@"adsInfo"][@"adsMob"] boolValue])
+        {
+            [[Ads sharedInstance] S_didShowFullAdsWithInfor:@{} andCompletion:^(BannerEvent event, NSError *error, id bannerAd) {
+                switch (event)
+                {
+                    case AdsDone:
+                    {
+                        
+                    }
+                        break;
+                    case AdsFailed:
+                    {
+                        
+                    }
+                        break;
+                    case AdsWillPresent:
+                    {
+                        
+                    }
+                        break;
+                    case AdsWillLeave:
+                    {
+                        
+                    }
+                        break;
+                    default:
+                        break;
+                }
+            }];
+        }
+        else
+        {
+            if([System getValue:@"adsInfo"][@"fullBanner"])
             {
-                case AdsDone:
-                {
+                [[Ads sharedInstance] G_didShowFullAdsWithInfor:@{@"host":self,@"adsId":[System getValue:@"adsInfo"][@"fullBanner"]/*,@"device":@""*/} andCompletion:^(BannerEvent event, NSError *error, id banner) {
                     
-                }
-                    break;
-                case AdsFailed:
-                {
-                    
-                }
-                    break;
-                case AdsWillPresent:
-                {
-                    
-                }
-                    break;
-                case AdsWillLeave:
-                {
-                    
-                }
-                    break;
-                default:
-                    break;
+                    switch (event)
+                    {
+                        case AdsDone:
+                            
+                            break;
+                        case AdsFailed:
+                            
+                            break;
+                        default:
+                            break;
+                    }
+                }];
             }
-        }];
+        }
     }
 }
 

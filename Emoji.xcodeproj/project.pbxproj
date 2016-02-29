@@ -20,7 +20,6 @@
 		FCC64F981C702A0000C412CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCC64F961C702A0000C412CD /* Main.storyboard */; };
 		FCC64F9A1C702A0000C412CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCC64F991C702A0000C412CD /* Assets.xcassets */; };
 		FCC64F9D1C702A0000C412CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCC64F9B1C702A0000C412CD /* LaunchScreen.storyboard */; };
-		FCC64FAB1C702B8900C412CD /* StartAds.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC64FA81C702B8900C412CD /* StartAds.m */; };
 		FCC64FAC1C702B8900C412CD /* StartApp.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FCC64FA91C702B8900C412CD /* StartApp.bundle */; };
 		FCC64FAD1C702B8900C412CD /* StartApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCC64FAA1C702B8900C412CD /* StartApp.framework */; };
 		FCC64FB71C702BA000C412CD /* CustomIOS7AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC64FAF1C702BA000C412CD /* CustomIOS7AlertView.m */; };
@@ -28,7 +27,6 @@
 		FCC64FB91C702BA000C412CD /* menu.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCC64FB21C702BA000C412CD /* menu.plist */; };
 		FCC64FBA1C702BA000C412CD /* menuShort.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCC64FB31C702BA000C412CD /* menuShort.plist */; };
 		FCC64FBB1C702BA000C412CD /* sideMenu.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCC64FB41C702BA000C412CD /* sideMenu.plist */; };
-		FCC64FBC1C702BA000C412CD /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC64FB61C702BA000C412CD /* XMLReader.m */; };
 		FCC64FC31C702BC200C412CD /* EM_Cells.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCC64FBE1C702BC200C412CD /* EM_Cells.xib */; };
 		FCC64FC41C702BC200C412CD /* EM_First_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC64FC01C702BC200C412CD /* EM_First_ViewController.m */; };
 		FCC64FC51C702BC200C412CD /* EM_First_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCC64FC11C702BC200C412CD /* EM_First_ViewController.xib */; };
@@ -37,6 +35,7 @@
 		FCC64FCB1C702BEE00C412CD /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = FCC64FC81C702BEE00C412CD /* Default.png */; };
 		FCC64FCC1C702BEE00C412CD /* Default~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = FCC64FC91C702BEE00C412CD /* Default~iphone.png */; };
 		FCC64FCF1C702DE600C412CD /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCC64FCE1C702DE600C412CD /* CoreFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		FCF5F1CB1C83F7B100373E7E /* Ads.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF5F1CA1C83F7B100373E7E /* Ads.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,8 +60,6 @@
 		FCC64F991C702A0000C412CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FCC64F9C1C702A0000C412CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FCC64F9E1C702A0000C412CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FCC64FA71C702B8900C412CD /* StartAds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartAds.h; sourceTree = "<group>"; };
-		FCC64FA81C702B8900C412CD /* StartAds.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartAds.m; sourceTree = "<group>"; };
 		FCC64FA91C702B8900C412CD /* StartApp.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = StartApp.bundle; sourceTree = "<group>"; };
 		FCC64FAA1C702B8900C412CD /* StartApp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = StartApp.framework; sourceTree = "<group>"; };
 		FCC64FAE1C702BA000C412CD /* CustomIOS7AlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomIOS7AlertView.h; sourceTree = "<group>"; };
@@ -72,8 +69,6 @@
 		FCC64FB21C702BA000C412CD /* menu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = menu.plist; sourceTree = "<group>"; };
 		FCC64FB31C702BA000C412CD /* menuShort.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = menuShort.plist; sourceTree = "<group>"; };
 		FCC64FB41C702BA000C412CD /* sideMenu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = sideMenu.plist; sourceTree = "<group>"; };
-		FCC64FB51C702BA000C412CD /* XMLReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLReader.h; sourceTree = "<group>"; };
-		FCC64FB61C702BA000C412CD /* XMLReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLReader.m; sourceTree = "<group>"; };
 		FCC64FBE1C702BC200C412CD /* EM_Cells.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EM_Cells.xib; sourceTree = "<group>"; };
 		FCC64FBF1C702BC200C412CD /* EM_First_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EM_First_ViewController.h; sourceTree = "<group>"; };
 		FCC64FC01C702BC200C412CD /* EM_First_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EM_First_ViewController.m; sourceTree = "<group>"; };
@@ -84,6 +79,8 @@
 		FCC64FC91C702BEE00C412CD /* Default~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default~iphone.png"; sourceTree = "<group>"; };
 		FCC64FCD1C702BFD00C412CD /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		FCC64FCE1C702DE600C412CD /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		FCF5F1C91C83F7B100373E7E /* Ads.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ads.h; sourceTree = "<group>"; };
+		FCF5F1CA1C83F7B100373E7E /* Ads.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ads.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,8 +176,8 @@
 		FCC64FA51C702B6000C412CD /* Ads */ = {
 			isa = PBXGroup;
 			children = (
-				FCC64FA71C702B8900C412CD /* StartAds.h */,
-				FCC64FA81C702B8900C412CD /* StartAds.m */,
+				FCF5F1C91C83F7B100373E7E /* Ads.h */,
+				FCF5F1CA1C83F7B100373E7E /* Ads.m */,
 				FCC64FA91C702B8900C412CD /* StartApp.bundle */,
 				FCC64FAA1C702B8900C412CD /* StartApp.framework */,
 			);
@@ -201,8 +198,6 @@
 				FCC64FB21C702BA000C412CD /* menu.plist */,
 				FCC64FB31C702BA000C412CD /* menuShort.plist */,
 				FCC64FB41C702BA000C412CD /* sideMenu.plist */,
-				FCC64FB51C702BA000C412CD /* XMLReader.h */,
-				FCC64FB61C702BA000C412CD /* XMLReader.m */,
 			);
 			name = Plist;
 			sourceTree = "<group>";
@@ -362,13 +357,12 @@
 				FCC64F951C702A0000C412CD /* ViewController.m in Sources */,
 				FCC64FB81C702BA000C412CD /* EM_MenuView.m in Sources */,
 				FCC64F921C702A0000C412CD /* AppDelegate.m in Sources */,
+				FCF5F1CB1C83F7B100373E7E /* Ads.m in Sources */,
 				FCC64FC41C702BC200C412CD /* EM_First_ViewController.m in Sources */,
 				FCC64F8F1C702A0000C412CD /* main.m in Sources */,
 				FC59CCA21C70B11E00236614 /* M13ContextMenuItemIOS7.m in Sources */,
 				FC59CCA11C70B11E00236614 /* M13ContextMenu.m in Sources */,
 				FCC64FB71C702BA000C412CD /* CustomIOS7AlertView.m in Sources */,
-				FCC64FAB1C702B8900C412CD /* StartAds.m in Sources */,
-				FCC64FBC1C702BA000C412CD /* XMLReader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,7 +486,7 @@
 				);
 				GCC_PREFIX_HEADER = FaceEmoticons/PrefixHeader.pch;
 				INFOPLIST_FILE = FaceEmoticons/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vn.vmgmedia.emoji;
 				PRODUCT_NAME = Emoji;
@@ -514,7 +508,7 @@
 				);
 				GCC_PREFIX_HEADER = FaceEmoticons/PrefixHeader.pch;
 				INFOPLIST_FILE = FaceEmoticons/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vn.vmgmedia.emoji;
 				PRODUCT_NAME = Emoji;

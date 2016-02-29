@@ -19,12 +19,13 @@ PODS:
   - Bolts/AppLinks (1.6.0):
     - Bolts/Tasks
   - Bolts/Tasks (1.6.0)
-  - FBPLUGIN (0.2.9):
+  - FBPLUGIN (0.3.1):
     - ASIHTTPRequest (~> 1.8)
     - AVHexColor (~> 2.0)
     - FBSDKCoreKit (~> 4.4)
     - FBSDKLoginKit (~> 4.4)
     - FBSDKShareKit (~> 4.4)
+    - hpple (~> 0.2)
     - JSONKit-NoWarning (~> 1.2)
     - SDWebImage (~> 3.7)
     - SVProgressHUD
@@ -68,7 +69,7 @@ PODS:
     - MBProgressHUD
 
 DEPENDENCIES:
-  - FBPLUGIN (~> 0.2.9)
+  - FBPLUGIN (~> 0.3.1)
   - GoogleMobileAds (~> 7.6)
   - hpple (~> 0.2)
   - SDWebImage (~> 3.7)
@@ -79,7 +80,7 @@ SPEC CHECKSUMS:
   ASIHTTPRequest: ec013992946676b7978dcbde6396d57312d21db4
   AVHexColor: 33e5e102f3b6f3acd002779183ee226e21870c28
   Bolts: f52a250053bb517ca874523c3913776359ab3def
-  FBPLUGIN: d0c6cbf2a623705265aa08539b5e60118a4c76c3
+  FBPLUGIN: da4b04b5e9d9a531f95b61352778a450babc00d9
   FBSDKCoreKit: 13bec8373fb3af94d44daf2aa1e0958687897fbd
   FBSDKLoginKit: d3d4a2e9d31954deb00bfea964167a05ca1ea976
   FBSDKShareKit: 54587b4624706ace1e810cf83412a918141f807a
